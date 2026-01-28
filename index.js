@@ -16,9 +16,9 @@ async function getWeather() {
     const data = await response.json();
 
     const temp = data.current_condition[0].temp_C;
-    const desc = data.current_condition[0].weatherDesc[0].value;
+    const des = data.current_condition[0].weatherDesc[0].value;
 
-    console.log(`Weather in ${city}: ${temp}°C,${desc}`);
+    console.log(`Weather in ${city}: ${temp}°C,${des}`);
   } catch (err) {
     console.log("Error fetching weather");
   }
