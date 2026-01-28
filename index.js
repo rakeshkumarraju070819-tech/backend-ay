@@ -12,8 +12,8 @@ const url = `https://wttr.in/${city}?format=j1`;
 
 async function getWeather() {
   try {
-    const respons= await fetch(url);
-    const data = await respons.json();
+    const response= await fetch(url);
+    const data = await response.json();
 
     const temp = data.current_condition[0].temp_C;
     const des = data.current_condition[0].weatherDesc[0].value;
